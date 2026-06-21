@@ -1,0 +1,266 @@
+/* ====================================
+   VARIÁVEIS
+==================================== */
+
+:root{
+    --verde-principal: #ABC270;
+    --amarelo-principal: #FEC868;
+    --laranja-principal: #FDA769;
+    --marrom-principal: #473C33;
+    --branco: #ffffff;
+    --cinza-claro: #f8f9fa;
+}
+
+/* ====================================
+   GERAL
+==================================== */
+
+body{
+    background-color: var(--cinza-claro);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--marrom-principal);
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ====================================
+   NAVBAR
+==================================== */
+
+.navbar{
+    background-color: var(--branco);
+}
+
+.navbar-brand{
+    color: var(--marrom-principal) !important;
+    font-size: 1.4rem;
+}
+
+.nav-link{
+    color: var(--marrom-principal) !important;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: var(--laranja-principal) !important;
+}
+
+.nav-link.active{
+    color: var(--laranja-principal) !important;
+    font-weight: 700;
+}
+
+/* ====================================
+   TÍTULO
+==================================== */
+
+.dashboard-title{
+    color: var(--marrom-principal);
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+/* ====================================
+   CARDS DE STATUS
+==================================== */
+
+.status-card{
+    padding: 30px;
+    text-align: center;
+    border-radius: 25px;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    height: 100%;
+}
+
+.status-card:hover{
+    transform: translateY(-8px);
+}
+
+.em-dia{
+    background: var(--verde-principal);
+    color: var(--marrom-principal);
+}
+
+.pendente{
+    background: var(--amarelo-principal);
+    color: var(--marrom-principal);
+}
+
+.andamento{
+    background: var(--laranja-principal);
+    color: var(--branco);
+}
+
+.icone-status{
+    font-size: 2.5rem;
+}
+
+.status-card h2{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.status-card p{
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* ====================================
+   BOXES DASHBOARD
+==================================== */
+
+.dashboard-box{
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    overflow: hidden;
+}
+
+.dashboard-box .card-body{
+    padding: 25px;
+}
+
+.dashboard-box h4{
+    color: var(--marrom-principal);
+    font-weight: 700;
+}
+
+/* ====================================
+   BARRA DE PROGRESSO
+==================================== */
+
+.progress{
+    height: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #e9ecef;
+}
+
+.progresso-vacinas{
+    background: linear-gradient(
+        90deg,
+        var(--verde-principal),
+        var(--laranja-principal)
+    );
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ====================================
+   LISTA DE VACINAS
+==================================== */
+
+.list-group-item{
+    border-radius: 12px !important;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    font-weight: 600;
+    color: var(--marrom-principal);
+}
+
+.list-group-item:last-child{
+    margin-bottom: 0;
+}
+
+/* ====================================
+   ALERTAS
+==================================== */
+
+.alert{
+    border-radius: 15px;
+    font-weight: 500;
+}
+
+/* ====================================
+   BOTÕES
+==================================== */
+
+.btn-success{
+    background-color: var(--verde-principal);
+    border: none;
+    color: var(--marrom-principal);
+    font-weight: 600;
+}
+
+.btn-success:hover{
+    background-color: #98b05d;
+    color: var(--marrom-principal);
+}
+
+.btn-warning{
+    background-color: var(--amarelo-principal);
+    border: none;
+    color: var(--marrom-principal);
+    font-weight: 600;
+}
+
+.btn-warning:hover{
+    background-color: #e7b858;
+    color: var(--marrom-principal);
+}
+
+/* ====================================
+   FOOTER
+==================================== */
+
+footer{
+    background-color: var(--branco);
+}
+
+footer p{
+    color: var(--marrom-principal);
+    font-size: 0.95rem;
+}
+
+/* ====================================
+   RESPONSIVIDADE
+==================================== */
+
+@media(max-width: 992px){
+
+    .navbar-nav{
+        text-align: center;
+        margin-top: 15px;
+    }
+
+}
+
+@media(max-width: 768px){
+
+    .dashboard-title{
+        font-size: 2rem;
+    }
+
+    .status-card{
+        padding: 20px;
+    }
+
+    .status-card h2{
+        font-size: 2.2rem;
+    }
+
+    .icone-status{
+        font-size: 2rem;
+    }
+
+}
+
+@media(max-width: 576px){
+
+    .dashboard-title{
+        font-size: 1.8rem;
+    }
+
+    .dashboard-box .card-body{
+        padding: 20px;
+    }
+
+}
