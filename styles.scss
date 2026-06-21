@@ -1,0 +1,563 @@
+/* Import Ionic Theme Variables */
+@import './theme/variables.scss';
+
+/* ==================================================
+   VACINA KIDS
+   Estilos Globais da Aplicação
+   Paleta: #ABC270, #FEC868, #FDA769, #473C33
+================================================== */
+:root {
+  --color-primary: #ABC270;
+  --color-secondary: #FEC868;
+  --color-accent: #FDA769;
+  --color-dark: #473C33;
+
+  --color-success: #ABC270;
+  --color-warning: #FEC868;
+  --color-danger: #FDA769;
+  --color-info: #FDA769;
+
+  --text-dark: #473C33;
+  --text-light: #ffffff;
+  --border-color: #e8e8e8;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Reset Básico */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==================================================
+   BODY
+================================================== */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  background: linear-gradient(135deg, #f5f7fa 0%, #f9fbfd 100%);
+  background-attachment: fixed;
+
+  color: var(--text-dark);
+
+  overflow-x: hidden;
+}
+
+/* ==================================================
+   LINKS
+================================================== */
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+/* ==================================================
+   IMAGENS
+================================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ==================================================
+   CONTAINER PADRÃO
+================================================== */
+
+.container {
+  width: 100%;
+  padding: 16px;
+  margin: 0 auto;
+}
+
+/* ==================================================
+   TÍTULOS
+================================================== */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+p {
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+/* ==================================================
+   CARDS
+================================================== */
+
+.card-custom,
+ion-card {
+  background: var(--text-light);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 16px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-custom:hover,
+ion-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.card-custom h2 {
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+/* ==================================================
+   STATUS VACINAL / BADGES
+================================================== */
+
+.badge,
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.status-em-dia,
+.badge-success {
+  background: var(--color-primary);
+  color: var(--text-light);
+}
+
+.status-pendente,
+.badge-warning {
+  background: var(--color-secondary);
+  color: var(--text-dark);
+}
+
+.status-atrasada,
+.status-vencida,
+.badge-danger {
+  background: #e8534f;
+  color: var(--text-light);
+}
+
+.status-aplicada {
+  background: var(--color-primary);
+  color: var(--text-light);
+}
+
+.badge-info {
+  background: var(--color-accent);
+  color: var(--text-light);
+}
+
+/* ==================================================
+   FORMULÁRIOS
+================================================== */
+
+input,
+textarea,
+select,
+ion-input,
+ion-textarea,
+ion-select {
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+ion-input:focus-within,
+ion-textarea:focus-within {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(171, 194, 112, 0.1);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-error {
+  color: #e8534f;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.form-success {
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* ==================================================
+   BOTÕES
+================================================== */
+
+button,
+.btn,
+ion-button {
+  border: none;
+  border-radius: 12px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+button:disabled,
+.btn:disabled,
+ion-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Botão Primário - Verde */
+.btn-primary,
+ion-button[color="primary"] {
+  background-color: var(--color-primary);
+  color: var(--text-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover,
+ion-button[color="primary"]:hover {
+  background-color: #98a85d;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Botão Secundário - Amarelo */
+.btn-secondary,
+ion-button[color="secondary"] {
+  background-color: var(--color-secondary);
+  color: var(--text-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover,
+ion-button[color="secondary"]:hover {
+  background-color: #ffc047;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Botão Accent - Laranja */
+.btn-accent,
+.btn-warning,
+ion-button[color="warning"] {
+  background-color: var(--color-accent);
+  color: var(--text-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-accent:hover,
+.btn-warning:hover,
+ion-button[color="warning"]:hover {
+  background-color: #f89458;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Botão Dark - Marrom */
+.btn-dark,
+ion-button[color="dark"] {
+  background-color: var(--color-dark);
+  color: var(--text-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-dark:hover,
+ion-button[color="dark"]:hover {
+  background-color: #5a4a43;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Botão Outlined */
+.btn-outlined {
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outlined:hover {
+  background-color: var(--color-primary);
+  color: var(--text-light);
+}
+
+/* Botão pequeno */
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+}
+
+/* Botão grande */
+.btn-lg {
+  padding: 18px 32px;
+  font-size: 1.1rem;
+}
+
+/* Botão bloco completo */
+.btn-block {
+  width: 100%;
+  display: flex;
+}
+
+/* ==================================================
+   TABELAS
+================================================== */
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background: #473C33;
+  color: white;
+  padding: 12px;
+}
+
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+/* ==================================================
+   FORMULÁRIOS
+================================================== */
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid #dcdcdc;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #ABC270;
+}
+
+/* ==================================================
+   LOADING
+================================================== */
+
+.loading-center {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  min-height: 300px;
+}
+
+/* ==================================================
+   ANIMAÇÕES
+================================================== */
+
+.fade-in {
+  animation: fadeIn .5s ease-in-out;
+}
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* ==================================================
+   RESPONSIVIDADE
+================================================== */
+
+/* Tablet */
+
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 900px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  button,
+  .btn,
+  ion-button {
+    width: 100%;
+  }
+
+}
+
+/* Desktop */
+
+@media (min-width: 1200px) {
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+}

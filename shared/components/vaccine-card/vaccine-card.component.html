@@ -1,0 +1,28 @@
+<ion-card>
+
+  <ion-card-header>
+
+    <ion-card-title>
+      {{ vaccine.name }}
+    </ion-card-title>
+
+  </ion-card-header>
+
+  <ion-card-content>
+
+    <p>
+      {{ vaccine.description }}
+    </p>
+
+    <p>
+      Faixa etária:
+      {{ vaccine.recommendedAge }}
+    </p>
+
+    <app-status-badge
+      [status]="status">
+    </app-status-badge>
+
+  </ion-card-content>
+
+</ion-card>
