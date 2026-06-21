@@ -1,0 +1,65 @@
+:root {
+
+  --primary: #ABC270;
+  --secondary: #FEC868;
+  --accent: #FDA769;
+  --dark: #473C33;
+  --white: #ffffff;
+  --light: #f8f9fa;
+
+}
+
+body,
+ion-content {
+
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f9fa;
+  color: var(--dark);
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+
+  color: var(--dark);
+  font-weight: 700;
+
+}
+
+ion-toolbar {
+
+  --background: #ABC270;
+  --color: white;
+
+}
+
+ion-button {
+
+  --background: #ABC270;
+  --border-radius: 12px;
+  font-weight: 600;
+
+}
+
+ion-card {
+
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  margin-bottom: 16px;
+
+}
+
+ion-item {
+
+  --border-radius: 12px;
+  margin-bottom: 8px;
+
+}
+
+.page-container {
+
+  padding: 20px;
+
+}

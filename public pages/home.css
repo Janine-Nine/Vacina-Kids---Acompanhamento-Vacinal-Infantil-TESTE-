@@ -1,0 +1,48 @@
+.hero {
+
+  text-align: center;
+  padding: 30px 20px;
+
+}
+
+.hero h1 {
+
+  color: #473C33;
+  font-size: 2rem;
+
+}
+
+.hero p {
+
+  color: #666;
+  line-height: 1.7;
+
+}
+
+.feature-card {
+
+  background: white;
+  border-left: 6px solid #ABC270;
+
+}
+
+.feature-icon {
+
+  font-size: 40px;
+  color: #ABC270;
+
+}
+
+.welcome-banner {
+
+  background: linear-gradient(
+  135deg,
+  #ABC270,
+  #FEC868
+  );
+
+  color: white;
+  padding: 25px;
+  border-radius: 20px;
+
+}
