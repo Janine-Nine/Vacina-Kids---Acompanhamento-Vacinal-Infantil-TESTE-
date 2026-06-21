@@ -1,0 +1,145 @@
+:root{
+    --verde-principal: #ABC270;
+    --amarelo-principal: #FEC868;
+    --laranja-principal: #FDA769;
+    --marrom-principal: #473C33;
+}
+
+/* ==========================
+   SEÇÃO CAMPANHAS
+========================== */
+
+.campanha-card{
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all .3s ease;
+}
+
+.campanha-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* ==========================
+   IMAGEM
+========================== */
+
+.campanha-img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.campanha-card:hover .campanha-img{
+    transform: scale(1.05);
+}
+
+/* ==========================
+   INFORMAÇÕES
+========================== */
+
+.campanha-info{
+    padding: 25px;
+}
+
+.campanha-info h4{
+    color: var(--marrom-principal);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   DATA
+========================== */
+
+.campanha-data{
+    background: var(--amarelo-principal);
+    color: var(--marrom-principal);
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* ==========================
+   LOCAL
+========================== */
+
+.campanha-local{
+    color: var(--marrom-principal);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* ==========================
+   ENDEREÇO
+========================== */
+
+.campanha-endereco{
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+   BOTÃO
+========================== */
+
+.btn-participar{
+    background: linear-gradient(
+        135deg,
+        var(--verde-principal),
+        var(--laranja-principal)
+    );
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn-participar:hover{
+    background: var(--laranja-principal);
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* ==========================
+   BADGE
+========================== */
+
+.campanha-badge{
+    background: var(--verde-principal);
+    color: var(--marrom-principal);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media(max-width:768px){
+
+    .campanha-img{
+        height: 200px;
+    }
+
+    .campanha-info{
+        padding: 20px;
+    }
+
+    .btn-participar{
+        width: 100%;
+    }
+
+}
