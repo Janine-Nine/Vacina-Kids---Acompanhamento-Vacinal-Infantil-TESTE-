@@ -1,0 +1,170 @@
+:root{
+    --verde-principal: #ABC270;
+    --amarelo-principal: #FEC868;
+    --laranja-principal: #FDA769;
+    --marrom-principal: #473C33;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body{
+    background: #fffdf7;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar{
+    background: linear-gradient(
+        135deg,
+        var(--verde-principal),
+        var(--laranja-principal)
+    ) !important;
+}
+
+.navbar-brand{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-link{
+    color: white !important;
+    font-weight: 500;
+    transition: all .3s;
+}
+
+.nav-link:hover{
+    color: var(--marrom-principal) !important;
+    transform: translateY(-2px);
+}
+
+/* ==========================
+   CARD PRINCIPAL
+========================== */
+
+.calendario-card{
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    margin-top: 30px;
+}
+
+.calendario-card h2{
+    color: var(--marrom-principal);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ==========================
+   INPUT DATA
+========================== */
+
+input[type="date"]{
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--verde-principal);
+    border-radius: 15px;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+input[type="date"]:focus{
+    outline: none;
+    border-color: var(--laranja-principal);
+    box-shadow: 0 0 10px rgba(253,167,105,.4);
+}
+
+/* ==========================
+   EVENTOS DE VACINAÇÃO
+========================== */
+
+.evento-vacina{
+    background: linear-gradient(
+        135deg,
+        var(--verde-principal),
+        var(--amarelo-principal)
+    );
+    color: var(--marrom-principal);
+    padding: 18px;
+    border-radius: 15px;
+    margin-top: 15px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.evento-vacina:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+/* ==========================
+   IMAGENS
+========================== */
+
+.card img,
+.calendario-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: .3s;
+    box-shadow: 0 6px 15px rgba(0,0,0,.10);
+}
+
+.card img:hover,
+.calendario-img:hover{
+    transform: scale(1.03);
+}
+
+/* ==========================
+   BOTÃO SAIR
+========================== */
+
+.btn-warning{
+    background: var(--amarelo-principal);
+    border: none;
+    color: var(--marrom-principal);
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 10px 20px;
+}
+
+.btn-warning:hover{
+    background: var(--laranja-principal);
+    color: white;
+}
+
+/* ==========================
+   TÍTULOS
+========================== */
+
+h2{
+    font-weight: 700;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media(max-width:768px){
+
+    .calendario-card{
+        padding:20px;
+    }
+
+    .card img,
+    .calendario-img{
+        height:220px;
+    }
+
+    .navbar-brand{
+        font-size:1.1rem;
+    }
+
+}
