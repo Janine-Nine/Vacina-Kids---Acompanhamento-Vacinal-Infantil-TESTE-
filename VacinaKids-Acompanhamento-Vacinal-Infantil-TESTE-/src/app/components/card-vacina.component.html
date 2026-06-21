@@ -1,0 +1,29 @@
+<ion-card>
+
+  <ion-card-header>
+
+    <ion-card-title>
+
+      💉 {{ vacina.nome }}
+
+    </ion-card-title>
+
+  </ion-card-header>
+
+  <ion-card-content>
+
+    <p>
+
+      Data prevista:
+
+      {{ vacina.dataPrevista }}
+
+    </p>
+
+    <app-status-vacinal
+      [status]="vacina.status">
+    </app-status-vacinal>
+
+  </ion-card-content>
+
+</ion-card>
