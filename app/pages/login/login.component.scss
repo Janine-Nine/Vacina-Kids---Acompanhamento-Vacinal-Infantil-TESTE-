@@ -1,0 +1,239 @@
+.login-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f9fbfd 100%);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 768px) {
+    box-shadow: none;
+  }
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 2.5rem;
+    color: #ABC270;
+    margin-bottom: 8px;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  .subtitle {
+    color: #888888;
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #473C33;
+      font-size: 0.95rem;
+
+      &.label-required::after {
+        content: ' *';
+        color: #e8534f;
+        font-weight: 700;
+      }
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 12px 14px;
+      border: 2px solid #e8e8e8;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #ABC270;
+        box-shadow: 0 0 0 3px rgba(171, 194, 112, 0.1);
+      }
+
+      &::placeholder {
+        color: #999;
+      }
+    }
+
+    .toggle-password {
+      background: none;
+      border: none;
+      color: #ABC270;
+      font-size: 0.75rem;
+      cursor: pointer;
+      margin-top: 6px;
+      padding: 0;
+      font-weight: 500;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #FDA769;
+      }
+    }
+
+    .form-error {
+      color: #e8534f;
+      font-size: 0.85rem;
+      margin-top: 6px;
+      font-weight: 500;
+    }
+  }
+
+  .alert {
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+
+    &.alert-danger {
+      background-color: rgba(232, 83, 79, 0.1);
+      color: #b83f3a;
+      border-left: 4px solid #e8534f;
+    }
+
+    &.alert-info {
+      background-color: rgba(253, 167, 105, 0.1);
+      color: #c87043;
+      border-left: 4px solid #FDA769;
+    }
+  }
+
+  .button-group {
+    display: flex;
+    gap: 12px;
+
+    .btn {
+      border: none;
+      border-radius: 12px;
+      padding: 14px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      &.btn-primary {
+        background-color: #ABC270;
+        color: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        flex: 1;
+
+        &:hover:not(:disabled) {
+          background-color: #98a85d;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+          transform: translateY(-2px);
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+
+      &.btn-secondary {
+        background-color: #FEC868;
+        color: #473C33;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        flex: 1;
+
+        &:hover:not(:disabled) {
+          background-color: #ffc047;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+          transform: translateY(-2px);
+        }
+      }
+
+      &.btn-lg {
+        padding: 16px 32px;
+        font-size: 1.05rem;
+      }
+
+      &.btn-block {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.login-footer {
+  margin-top: 20px;
+  text-align: center;
+
+  p {
+    margin: 0;
+    color: #888888;
+    font-size: 0.95rem;
+
+    a {
+      color: #ABC270;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #FDA769;
+      }
+    }
+  }
+}
+
+.login-illustration {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ABC270 0%, #FDA769 100%);
+  color: white;
+  text-align: center;
+  padding: 40px;
+
+  .illustration-content {
+    max-width: 300px;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      color: white;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
