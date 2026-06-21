@@ -1,0 +1,10 @@
+{
+  "buildCommand": "cd app-teste && npm install && npm run build",
+  "outputDirectory": "app-teste/www",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
