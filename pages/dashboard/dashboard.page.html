@@ -1,0 +1,160 @@
+<ion-header>
+
+  <ion-toolbar>
+
+    <ion-title>
+      Vacina Kids
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- BOAS VINDAS -->
+
+  <div class="welcome">
+
+    <h1>
+      Painel de Vacinação
+    </h1>
+
+    <p>
+      Acompanhe a saúde das crianças
+    </p>
+
+  </div>
+
+  <!-- INDICADORES -->
+
+  <div class="stats-grid">
+
+    <ion-card>
+
+      <ion-card-content>
+
+        <h2>
+          {{ totalChildren }}
+        </h2>
+
+        <p>
+          Crianças
+        </p>
+
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card>
+
+      <ion-card-content>
+
+        <h2>
+          {{ totalVaccinesApplied }}
+        </h2>
+
+        <p>
+          Aplicadas
+        </p>
+
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card>
+
+      <ion-card-content>
+
+        <h2>
+          {{ totalPendingVaccines }}
+        </h2>
+
+        <p>
+          Pendentes
+        </p>
+
+      </ion-card-content>
+
+    </ion-card>
+
+    <ion-card>
+
+      <ion-card-content>
+
+        <h2>
+          {{ totalLateVaccines }}
+        </h2>
+
+        <p>
+          Atrasadas
+        </p>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </div>
+
+  <!-- PROGRESSO -->
+
+  <ion-card>
+
+    <ion-card-header>
+
+      <ion-card-title>
+        Situação Vacinal Geral
+      </ion-card-title>
+
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-progress-bar
+        [value]="vaccinationProgress / 100">
+      </ion-progress-bar>
+
+      <p class="progress-text">
+
+        {{ vaccinationProgress }}%
+
+        das vacinas em dia
+
+      </p>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <!-- CRIANÇAS -->
+
+  <section>
+
+    <h2>
+      Crianças Cadastradas
+    </h2>
+
+    <app-child-card
+      *ngFor="let child of children"
+      [child]="child"
+      [progress]="0.75">
+    </app-child-card>
+
+  </section>
+
+  <!-- CAMPANHAS -->
+
+  <section>
+
+    <h2>
+      Campanhas Ativas
+    </h2>
+
+    <app-campaign-card
+      *ngFor="let campaign of campaigns"
+      [campaign]="campaign">
+    </app-campaign-card>
+
+  </section>
+
+</ion-content>

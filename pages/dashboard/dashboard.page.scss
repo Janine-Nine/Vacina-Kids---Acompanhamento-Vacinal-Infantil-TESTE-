@@ -1,0 +1,128 @@
+:host {
+
+  --primary: #ABC270;
+  --secondary: #FEC868;
+  --warning: #FDA769;
+  --dark: #473C33;
+
+}
+
+.welcome {
+
+  margin-bottom: 20px;
+
+  h1 {
+
+    color: var(--dark);
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+  }
+
+  p {
+
+    color: #666;
+
+  }
+
+}
+
+.stats-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(150px, 1fr));
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+
+}
+
+.stats-grid ion-card {
+
+  text-align: center;
+
+}
+
+.stats-grid h2 {
+
+  color: var(--primary);
+
+  font-size: 32px;
+
+  font-weight: bold;
+
+}
+
+.stats-grid p {
+
+  color: var(--dark);
+
+}
+
+.progress-text {
+
+  text-align: center;
+
+  margin-top: 10px;
+
+  font-weight: 600;
+
+}
+
+section {
+
+  margin-top: 30px;
+
+}
+
+section h2 {
+
+  color: var(--dark);
+
+  margin-bottom: 15px;
+
+}
+
+ion-progress-bar {
+
+  height: 12px;
+
+  border-radius: 12px;
+
+}
+
+ion-card {
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,.08);
+
+}
+
+@media (max-width: 768px) {
+
+  .stats-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .stats-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+}
